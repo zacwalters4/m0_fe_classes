@@ -1,4 +1,4 @@
-# OOP CFU
+# Classes CFU
 
 ## Setup
 
