@@ -22,7 +22,26 @@ jim.say("Howdy");
 // it should have a pet property, that is a bat, by default BUT it could be dynamic if info is passed in initially
 // it should have a thirsty property, that is true by default
 // it should have a drink method. When called, the thirsty property changes to false
+class Vampire {
+  constructor(name, pet) {
+    this.name = name;
+    this.pet = pet;
+    if(pet === undefined){
+      this.pet = "bat";
+    }
+    this.thirsty = true;
+  }
+    drink(){
+    this.thirsty = false;
+  }
+}
 
+var steve = new Vampire("steve");
+console.log(steve);
+var craig = new Vampire("craig", "mosquito")
+console.log(craig);
+craig.drink();
+console.log(craig);
 
 
 //  Write a Dragon class
@@ -32,6 +51,25 @@ jim.say("Howdy");
 //  it should have a isHungry property that is true by default
 //  it should have a eat method. If the dragon eats 4 times, it is no longer hungry
   // HINT: This requires you to use your knowledge from the conditionals lesson
+class Dragon{
+  constructor(name, rider, color){
+  this.name = name;
+  this.rider = rider;
+  this.color = color;
+  this.isHungry = true;
+  }
+  eat(amount){
+    if (amount >= 4){
+      this.isHungry = false;
+
+    }
+
+  }
+}
+var tim = new Dragon("tim", "bill", "black");
+console.log(tim);
+tim.eat(4);
+console.log(tim);
 
 
 
